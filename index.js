@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   // const startDay = new Date(newDate.setHours(0, 0, 0, 0));
   // const endDay = new Date(newDate.setHours(23, 59, 59, 999));
 
-  res.send({ sucess: true, message: 'Hello World!', date, lessOneHour, newDate, currentTime: new Date() });
+  res.send({ sucess: true, message: 'Hello World!' });
 });
 
 app.post('/users', addUser);
