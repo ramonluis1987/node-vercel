@@ -64,3 +64,13 @@ exports.getAgeAverage = (req, res) => {
     res.status(500).send({ error });
   }
 };
+
+exports.createPoint = async (req, res) => {
+  try {
+    const point = await userService.createPoint(JSON.stringify(req.body));
+
+    res.status(200).send({ point });
+  } catch (error) {
+    res.status(500).send({ error });
+  }
+};

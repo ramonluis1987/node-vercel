@@ -7,7 +7,6 @@ class User {
   products;
 
   constructor(id, name, age, products = [], role) {
-    console.log(role);
     this.id = id;
     this.name = name;
     this.age = age;

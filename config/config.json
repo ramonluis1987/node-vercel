@@ -1,0 +1,30 @@
+{
+  "development": {
+    "username": "default",
+    "password": "qnSDMLVX5u4s",
+    "database": "verceldb",
+    "host": "ep-delicate-lake-a66yh3gf-pooler.us-west-2.aws.neon.tech",
+    "dialect": "postgres",
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "test": {
+    "username": "default",
+    "password": "qnSDMLVX5u4s",
+    "database": "verceldb",
+    "host": "ep-delicate-lake-a66yh3gf-pooler.us-west-2.aws.neon.tech",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "default",
+    "password": "qnSDMLVX5u4s",
+    "database": "verceldb",
+    "host": "ep-delicate-lake-a66yh3gf-pooler.us-west-2.aws.neon.tech",
+    "dialect": "postgres"
+  }
+}

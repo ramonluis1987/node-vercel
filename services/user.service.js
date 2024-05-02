@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { Point, User } = require('../models');
 
 let users = [];
 
@@ -44,8 +44,13 @@ const getAgeAverageByRole = (role) => {
   return ageAverage;
 };
 
+const createPoint = async (point) => {
+  return await Point.create({ coordinate: point });
+}
+
 module.exports = {
   addUser,
+  createPoint,
   getAgeAverage,
   getAgeAverageByRole,
   getUsers,

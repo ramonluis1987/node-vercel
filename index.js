@@ -1,10 +1,20 @@
 const express = require('express');
 
-const { addUser, getAgeAverage, getUsers, getUserById, updateUser } = require('./controllers/user.controller');
+const { sequelize } = require('./models');
+
+const { addUser, createPoint, getAgeAverage, getUsers, getUserById, updateUser } = require('./controllers/user.controller');
 
 const app = express();
 
 const port = process.env.PORT || 3000;
+
+sequelize.sync()
+  .then(() => {
+    console.log("sync db.");
+  })
+  .catch((err) => {
+    console.log("Failed to sync db: " + err.message);
+  });
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -25,6 +35,7 @@ app.get('/users', getUsers);
 app.get('/users/:id', getUserById);
 app.put('/users/:id', updateUser);
 app.get('/users/ageAverage', getAgeAverage);
+app.post('/points', createPoint);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
