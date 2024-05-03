@@ -2,8 +2,8 @@
 const Sequelize = require('sequelize');
 const pg = require('pg');
 
-const sequelize = new Sequelize('verceldb', 'default', 'qnSDMLVX5u4s', {
-  host: 'ep-delicate-lake-a66yh3gf-pooler.us-west-2.aws.neon.tech',
+const sequelize = new Sequelize('trackingdb', 'trackingdb', '6ibglv6qw3bicZhOOG5A5p2EDpGSu5K1', {
+  host: 'dpg-coq6jhljm4es73ag8qe0-a.oregon-postgres.render.com',
   dialect: 'postgres',
   ssl: true,
   dialectOptions: {
