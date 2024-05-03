@@ -1,5 +1,6 @@
 
 const Sequelize = require('sequelize');
+const pg = require('pg');
 
 const sequelize = new Sequelize('verceldb', 'default', 'qnSDMLVX5u4s', {
   host: 'ep-delicate-lake-a66yh3gf-pooler.us-west-2.aws.neon.tech',
@@ -10,7 +11,8 @@ const sequelize = new Sequelize('verceldb', 'default', 'qnSDMLVX5u4s', {
       require: true,
       rejectUnauthorized: false,
     }
-  }
+  },
+  dialectModule: pg,
 });
 
 const User = require('./user');
